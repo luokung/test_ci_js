@@ -6,4 +6,4 @@ script:
   - npm install coveralls -g
   - npm install jest -g
   - node main.js
-  - jest
+  - jest --coverage --coverageReporters=text-lcov | coveralls
