@@ -8,3 +8,5 @@ function mult(a,b) {
 }
 
 console.log('hello world ' + add(1,2) + ',' + mult(1,2));
+
+module.exports = add;
