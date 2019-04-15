@@ -4,5 +4,6 @@ node_js:
 
 script:
   - npm install coveralls -g
+  - npm install jest -g
   - node main.js
-  - coveralls main.js -v
+  - jest
