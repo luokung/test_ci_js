@@ -1,9 +1,18 @@
 language: node_js
+
 node_js:
   - "7"
-
+  
+addons:
+  sonarcloud:
+    organization: "luokung" # the key of the org you chose at step #3
+    token:
+      secure: "$SONAR_TOKEN" # encrypted value of your token
+      
 script:
+
   - npm install coveralls -g
   - npm install jest -g
   - node main.js
   - jest --coverage --coverageReporters=text-lcov | coveralls
+  - sonar-scanner
