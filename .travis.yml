@@ -3,4 +3,6 @@ node_js:
   - "7"
 
 script:
+  - npm install coveralls -g
   - node main.js
+  - coveralls main.js -v
